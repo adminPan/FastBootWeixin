@@ -115,6 +115,8 @@ public class WxOAuth2Interceptor implements HandlerInterceptor {
             if (sb.charAt(sb.length() - 1) == '&') {
                 sb.deleteCharAt(sb.length() - 1);
             }
+        } else {
+            sb.append("?".concat(queryString));
         }
         return sb.toString();
     }
